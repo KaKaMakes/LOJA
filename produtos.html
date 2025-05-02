@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaka Makes - As makes mais desejadas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFD1DC',
+                        secondary: '#F8BBD0',
+                        accent: '#FF69B4',
+                        gold: '#D4AF37',
+                        darkpink: '#C2185B'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,209,220,0.9) 0%, rgba(248,187,208,0.9) 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .no-photo {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .no-photo-icon {
+            color: #C2185B;
+            opacity: 0.3;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-paint-brush text-accent text-2xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-darkpink font-display">Kaka Makes</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-darkpink hover:text-accent font-medium">Início</a>
+                <a href="produtos.html" class="text-gray-600 hover:text-accent font-medium">Produtos</a>
+                <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-600 hover:text-accent font-medium">Novidades</a>
+                <a href="SOBRE.HTML" class="text-gray-600 hover:text-accent font-medium">Sobre</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-shopping-cart text-darkpink text-xl"></i>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-darkpink text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+<!-- Featured Products -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-darkpink mb-12 font-display">
+            <i class="fas fa-star text-gold mr-2"></i> Destaques do Momento
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+            
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                <div class="relative overflow-hidden h-48">
+                    <img src="blush.jpg" alt="Blush" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-gold text-white text-xs font-bold px-2 py-1 rounded-full">PROMO</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-darkpink mb-1">Blush</h3>
+                    <p class="text-gray-600 text-sm mb-2">Pigmento incrível</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+                        <a href="https://wa.me/5514996651947?text=Oi%20gostaria%20de%20comprar%20a%20de%20Blush%20por%20R%2415,99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 (Gloss) -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                <div class="relative overflow-hidden h-48">
+                    <img src="gloss.jpg" alt="Gloss Labial" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold text-darkpink mb-1">Gloss Labial</h3>
+                    <p class="text-gray-600 text-sm mb-2">Brilho intenso e hidratação</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+                        <a href="https://wa.me/5514996651947?text=Oi%20gostaria%20de%20comprar%20o%20Gloss%20Labial%20por%20R%2415,99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+<!-- Product 4 (cilios) -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48 no-photo">
+        <img src="cilios.jpg" alt= "Cilíos" class="w-full h-full object-cover">
+        <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">MAIS VENDIDO</div>
+    </div>
+    <div class="p-4">
+        <h3 class="text-lg font-bold text-darkpink mb-1">Cilíos</h3>
+        <p class="text-gray-600 text-sm mb-2">Cilios para realçar sua beleza</p>
+        <div class="flex justify-between items-center">
+            <span class="text-accent font-bold text-lg">R$ 15,99</span>
+            <a href="https://wa.me/5514996651947?text=Oi%20gostaria%20de%20comprar%20a%20Cilios%20K%C3%ADita%20por%20R%2415,99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+                <i class="fas fa-plus"></i>
+            </a>
+            
+        </div>
+    </div>
+</div> <!-- ← FECHOU A DIV DO PRODUTO 4 -->
+
+<!-- Product 5 (Lápis de olho) -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48 no-photo">
+        <img src="-lapis.jpg" alt="Lápis de Olho" class="w-full h-full object-cover">
+        <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">MAIS VENDIDO</div>
+    </div>
+    <div class="p-5">
+        <h3 class="text-lg font-bold text-darkpink mb-1">Lápis de Olho</h3>
+        <p class="text-gray-600 text-sm mb-2">Pigmentação marcante e textura macia para seus olhos.</p>
+        <div class="flex justify-between items-center">
+            <span class="text-accent font-bold text-lg">R$ 7,99</span>
+            <a href="https://wa.me/5514996651947?text=Oi%20gostaria%20de%20comprar%20o%20L%C3%A1pis%20de%20Olho%20por%20R%247,99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+                <i class="fas fa-plus"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Product - Serum Facial -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+        <img src="serum.jpg" alt"Serum Facial" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Serum Facial</h3>
+      <p class="text-gray-600 text-sm mb-2">Hidratação intensa e brilho natural para a pele.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%2C%20gostaria%20de%20comprar%20o%20Serum%20Facial%20por%20R%2415%2C99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+            <i class="fas fa-plus"></i>
+          </a>
+          
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Product - Esfoliante Facial -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+      <img src="esfoliante.jpg" alt= "Esfoliante" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Esfoliante Facial</h3>
+      <p class="text-gray-600 text-sm mb-2">Remove células mortas e deixa a pele renovada e macia.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 19,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%20gostaria%20de%20comprar%20o%20Esfoliante%20Facial%20por%20R$%2019,99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+      
+    
+<!-- Product - Rímel -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+      <img src="rimel.jpg" alt="Rímel" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Rímel</h3>
+      <p class="text-gray-600 text-sm mb-2">Realce o olhar com volume e definição.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%2C%20gostaria%20de%20comprar%20o%20R%C3%ADmel%20por%20R%2415%2C99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product - Tiara de Maquiagem -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+      <img src="tiara.jpg" alt="Tiara de Maquiagem" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Tiara de Maquiagem</h3>
+      <p class="text-gray-600 text-sm mb-2">Ideal para prender o cabelo ao se maquiar ou cuidar da pele.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%2C%20gostaria%20de%20comprar%20a%20Tiara%20de%20Maquiagem%20por%20R%2415%2C99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Product - Óculos -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+      <img src="oculos.jpg" alt="Óculos" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Óculos</h3>
+      <p class="text-gray-600 text-sm mb-2">Estilo e proteção para complementar sua make.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 19,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%2C%20gostaria%20de%20comprar%20os%20%C3%93culos%20por%20R%2419%2C99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product - Kit de Esponja de Maquiagem -->
+<div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+    <div class="relative overflow-hidden h-48">
+      <img src="kitesponja.jpg" alt="Kit de Esponja de Maquiagem" class="w-full h-full object-cover">
+      <div class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+    </div>
+    <div class="p-4">
+      <h3 class="text-lg font-bold text-darkpink mb-1">Kit de Esponja de Maquiagem</h3>
+      <p class="text-gray-600 text-sm mb-2">Kit com esponjas para um acabamento impecável na maquiagem.</p>
+      <div class="flex justify-between items-center">
+        <span class="text-accent font-bold text-lg">R$ 15,99</span>
+        <a href="https://wa.me/5514996651947?text=Oi%2C%20gostaria%20de%20comprar%20o%20Kit%20de%20Esponja%20de%20Maquiagem%20por%20R%2415%2C99" target="_blank" class="bg-primary hover:bg-secondary text-darkpink rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+            </div>
+        </div>
+
+           <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center font-display">
+                        <i class="fas fa-paint-brush text-primary mr-2"></i> Kaka Makes
+                    </h3>
+                    <p class="text-gray-400">As makes mais desejadas por um preço que cabe no seu bolso!</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/kakamakes_cosmeticos/" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.instagram.com/kakamakes_cosmeticos/" class="text-gray-400 hover:text-primary">Minha conta</a></li>
+                        <li><a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-400 hover:text-primary">Meus pedidos</a></li>
+                        <li><a href="POLITICA-ENTREGA.html" class="text-gray-400 hover:text-primary">Política de entrega</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-2 mt-1"></i>
+                            <span class="text-gray-400">Carlos Thomal 1361 Jardim Itamarati - apenas retirada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-2"></i>
+                            <span class="text-gray-400">+55 14 99665-1947</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Formas de Pagamento</h4>
+                    <div class="bg-gray-800 p-2 rounded flex items-center justify-center">
+                        <i class="fas fa-money-bill-wave text-2xl"></i>
+                    </div>
+                    <div class="bg-gray-800 p-2 rounded flex items-center justify-center">
+                        <i class="fab fa-pix text-2xl"></i>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Kaka Makes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition duration-300 transform hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>

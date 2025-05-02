@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaka Makes - As makes mais desejadas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFD1DC',
+                        secondary: '#F8BBD0',
+                        accent: '#FF69B4',
+                        gold: '#D4AF37',
+                        darkpink: '#C2185B'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,209,220,0.9) 0%, rgba(248,187,208,0.9) 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .no-photo {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .no-photo-icon {
+            color: #C2185B;
+            opacity: 0.3;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-paint-brush text-accent text-2xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-darkpink font-display">Kaka Makes</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-darkpink hover:text-accent font-medium">Início</a>
+                <a href="produtos.html" class="text-gray-600 hover:text-accent font-medium">Produtos</a>
+                <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-600 hover:text-accent font-medium">Novidades</a>
+                <a href="SOBRE.HTML" class="text-gray-600 hover:text-accent font-medium">Sobre</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-shopping-cart text-darkpink text-xl"></i>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-darkpink text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+  <main class="py-12 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-darkpink mb-6">Sobre Nós</h2>
+    <p class="text-lg mb-4">
+      Bem-vinda à nossa loja! 💕 Aqui acreditamos que toda mulher merece se sentir linda, confiante e valorizada sem gastar muito.
+    </p>
+    <p class="text-lg mb-4">
+      Selecionamos com carinho os melhores produtos de beleza — todos por apenas <span class="font-semibold text-accent">R$ 15,99</span> — para trazer praticidade, estilo e autoestima ao seu dia a dia.
+    </p>
+    <p class="text-lg mb-4">
+      Atendimento rápido, direto no WhatsApp, com aquele jeitinho especial de quem ama o que faz. Nossa missão é te ver brilhar! ✨
+    </p>
+    <p class="text-sm text-gray-600 italic mt-6">Obrigada por fazer parte da nossa história. 💖</p>
+  </main>
+
+       <!-- Footer -->
+       <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center font-display">
+                        <i class="fas fa-paint-brush text-primary mr-2"></i> Kaka Makes
+                    </h3>
+                    <p class="text-gray-400">As makes mais desejadas por um preço que cabe no seu bolso!</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/kakamakes_cosmeticos/" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-400 hover:text-primary text-xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.instagram.com/kakamakes_cosmeticos/" class="text-gray-400 hover:text-primary">Minha conta</a></li>
+                        <li><a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-400 hover:text-primary">Meus pedidos</a></li>
+                        <li><a href="POLITICA-ENTREGA.html" class="text-gray-400 hover:text-primary">Política de entrega</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Atendimento</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mr-2 mt-1"></i>
+                            <span class="text-gray-400">Carlos Thomal 1361 Jardim Itamarati - apenas retirada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-2"></i>
+                            <span class="text-gray-400">+55 14 99665-1947</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Formas de Pagamento</h4>
+                    <div class="bg-gray-800 p-2 rounded flex items-center justify-center">
+                        <i class="fas fa-money-bill-wave text-2xl"></i>
+                    </div>
+                    <div class="bg-gray-800 p-2 rounded flex items-center justify-center">
+                        <i class="fab fa-pix text-2xl"></i>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Kaka Makes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition duration-300 transform hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
