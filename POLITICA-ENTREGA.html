@@ -63,6 +63,24 @@
 <body class="bg-white font-sans text-gray-800">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
+
+<!-- Menu Lateral -->
+<div id="mobileMenu" class="fixed inset-y-0 left-0 bg-white w-64 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="flex justify-between items-center px-4 py-4 border-b">
+        <h2 class="text-lg font-bold text-darkpink">Menu</h2>
+        <button onclick="toggleMenu()"><i class="fas fa-times text-darkpink text-xl"></i></button>
+    </div>
+    <nav class="flex flex-col space-y-4 p-4">
+        <a href="index.html" class="text-darkpink hover:text-accent font-medium">Início</a>
+        <a href="produtos.html" class="text-gray-700 hover:text-accent font-medium">Produtos</a>
+        <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" class="text-gray-700 hover:text-accent font-medium">Novidades</a>
+        <a href="SOBRE.HTML" class="text-gray-700 hover:text-accent font-medium">Sobre</a>
+    </nav>
+</div>
+
+<!-- Fundo escurecido -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="toggleMenu()"></div>
+      
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <i class="fas fa-paint-brush text-accent text-2xl mr-2"></i>
@@ -166,5 +184,27 @@
     <a href="https://chat.whatsapp.com/FkuRqwj8snW15T0eiU5nh7" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition duration-300 transform hover:scale-110">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const isOpen = menu.classList.contains('translate-x-0');
+
+        if (isOpen) {
+            menu.classList.remove('translate-x-0');
+            menu.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        } else {
+            menu.classList.remove('-translate-x-full');
+            menu.classList.add('translate-x-0');
+            overlay.classList.remove('hidden');
+        }
+    }
+
+    // Ativar botão do menu
+    document.querySelector('button.md\\:hidden').addEventListener('click', toggleMenu);
+</script>
+
 </body>
 </html>
